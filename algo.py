@@ -286,3 +286,120 @@
 # print(mi)
 # mi.delete("hasan")
 # print(mi)
+
+
+"--------------------------------------------------------------"
+"Circular Linked List:"
+
+# class Node:
+#     def __init__(self, data):
+#         self.data = data
+#         self.next = None
+
+#     def __repr__(self):
+#         return f"{self.data}"
+
+
+# class Cll:
+#     def __init__(self):
+#         self.head = None
+#         self.tail = None
+    
+#     def insert_first(self, data):
+#         new_node = Node(data)
+#         if self.head == None:
+#             self.head = new_node
+#             self.tail = new_node
+#         else:
+#             new_node.next = self.head
+#             self.head = new_node
+#             self.tail.next = self.head
+            
+#     def insert_last(self, data):
+#         new_node = Node(data)
+#         if self.head == None:
+#             self.head = new_node
+#             self.tail = new_node
+#         else:
+#             self.tail.next = new_node
+#         self.tail = new_node
+#         self.tail.next = self.head
+    
+#     def insert_index(self, data, index):
+#         new_node = Node(data)
+#         temp = self.head
+#         count = 1
+#         while temp.next != None and count < index:
+#             temp = temp.next
+#             count += 1
+#         new_node.next = temp.next
+#         temp.next = new_node
+    
+#     def delete_first(self):
+#         if self.head == None:
+#             print("NO nodes")
+#         else:
+#             self.head = self.head.next
+#             self.tail.next = self.head
+    
+#     def delete_last(self):
+#         if self.head == None:
+#             print("NO nodes")
+#         elif self.head.next == None:
+#             self.head = None
+#         else:
+#             temp = self.head
+#             while temp.next != self.tail:
+#                 temp = temp.next
+#             self.tail = temp
+#             temp.next = self.head
+    
+#     def delete_index(self, index):
+#         if self.head == None:
+#             print("NO nodes")
+#         else:
+#             temp = self.head
+#             count = 1
+#             while temp.next != None and count < index:
+#                 temp = temp.next
+
+#                 count += 1
+#             temp.next = temp.next.next
+    
+#     def display(self):
+#         temp = self.head
+#         if self.head == None:
+#             print("NO nodes")
+#         while temp != None:
+#             print(temp.data, "-->", end=" ")
+#             temp = temp.next
+#             if temp == self.head:
+#                 break
+    
+#     def search(self, data):
+#         if self.head == None:
+#             print("NO nodes")
+#         else:
+#             temp = self.head
+#             count = 0
+#             while temp:
+#                 count += 1
+#                 if temp.data == data:
+#                     print(data, " found at Position-->", count)
+#                     return
+#                 temp = temp.next
+#                 if temp == self.head:
+#                     break
+#             print("Element not found")
+
+# cll = Cll()
+# cll.insert_first("a")
+# cll.insert_first("b")
+# cll.insert_first("v")
+# cll.insert_first("d")
+# cll.insert_first("f")
+# cll.insert_last("7")
+# print(cll.tail)
+# print(cll.head)
+# cll.display()
+# cll.search("v")
